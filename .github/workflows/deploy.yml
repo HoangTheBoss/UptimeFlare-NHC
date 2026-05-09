@@ -48,6 +48,14 @@ jobs:
           cd worker
           npm install
 
+      - name: Push Worker secret
+        run: |
+          cd worker
+          echo "${{ secrets.TELEGRAM_BOT_TOKEN }}" | npx wrangler secret put TELEGRAM_BOT_TOKEN
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ steps.fetch_account_id.outputs.account_id }}
+
       - name: Build worker
         run: |
           cd worker
