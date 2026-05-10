@@ -111,18 +111,18 @@ const workerConfig: WorkerConfig = {
         'User-Agent': 'Uptimeflare',
       },
     },
-    // // Example TCP Monitor
-    // {
-    //   id: 'test_tcp_monitor',
-    //   name: 'Example TCP Monitor',
-    //   // `method` should be `TCP_PING` for tcp monitors
-    //   method: 'TCP_PING',
-    //   // `target` should be `host:port` for tcp monitors
-    //   target: '1.2.3.4:22',
-    //   tooltip: 'My production server SSH',
-    //   statusPageLink: 'https://example.com',
-    //   timeout: 5000,
-    // },
+    // Example TCP Monitor
+    {
+      id: 'minecraft',
+      name: 'BuDaMC',
+      // `method` should be `TCP_PING` for tcp monitors
+      method: 'TCP_PING',
+      // `target` should be `host:port` for tcp monitors
+      target: 'home.nguyenhoang.cloud:25565',
+      // tooltip: 'My production server SSH',
+      // statusPageLink: 'https://example.com',
+      timeout: 5000,
+    },
   ],
   // [Optional] Notification settings
   notification: {
