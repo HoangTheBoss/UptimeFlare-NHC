@@ -14,7 +14,7 @@ const pageConfig: PageConfig = {
     { link: 'mailto:me@nguyenhoang.cloud', label: 'Email', highlight: true },
   ],
   group: {
-    '🌐 nguyenhoang.cloud': ['mirrors', 'auth', 'nexusoss'],
+    '🌐 nguyenhoang.cloud': ['mirrors', 'auth', 'nexusoss', 'minecraft'],
     '📷 photoworks.pw': ['pw_drive'],
   },
 }
