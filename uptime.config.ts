@@ -142,7 +142,7 @@ const workerConfig: WorkerConfig = {
       // 'param': append url-encoded payload to URL search parameters
       // 'json': POST json payload as body, set content-type header to 'application/json'
       // 'x-www-form-urlencoded': POST url-encoded payload as body, set content-type header to 'x-www-form-urlencoded'
-      payloadType: 'x-www-form-urlencoded',
+      payloadType: 'param',
       // [Required] payload to be sent
       // $MSG will be replaced with the human-readable notification message
       payload: {
