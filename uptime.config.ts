@@ -166,7 +166,7 @@ const workerConfig: WorkerConfig = {
 // Also, related downtime notifications will be skipped (if any)
 // Of course, you can leave it empty if you don't need this feature
 
-const maintenances: MaintenanceConfig[] = []
+// const maintenances: MaintenanceConfig[] = []
 
 const maintenances: MaintenanceConfig[] = [
   {
