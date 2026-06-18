@@ -168,23 +168,23 @@ const workerConfig: WorkerConfig = {
 
 const maintenances: MaintenanceConfig[] = []
 
-// const maintenances: MaintenanceConfig[] = [
-//   {
-//     // [Optional] Monitor IDs to be affected by this maintenance
-//     monitors: [],
-//     // [Optional] default to "Scheduled Maintenance" if not specified
-//     // title: '',
-//     // Description of the maintenance, will be shown at status page
-//     // body: 'Network Infrastructure Upgrade',
-//     // Start time of the maintenance, in UNIX timestamp or ISO 8601 format
-//     // start: '2026-04-23T03:00:00+07:00',
-//     // [Optional] end time of the maintenance, in UNIX timestamp or ISO 8601 format
-//     // if not specified, the maintenance will be considered as on-going
-//     // end: '2050-01-01T00:00:00+08:00',
-//     // [Optional] color of the maintenance alert at status page, default to "yellow"
-//     // color: 'blue',
-//   },
-// ]
+const maintenances: MaintenanceConfig[] = [
+  {
+    // [Optional] Monitor IDs to be affected by this maintenance
+    // monitors: [],
+    // [Optional] default to "Scheduled Maintenance" if not specified
+    title: 'Unscheduled Maintenance',
+    // Description of the maintenance, will be shown at status page
+    body: 'Hardware Failure Recovery',
+    // Start time of the maintenance, in UNIX timestamp or ISO 8601 format
+    start: '2026-06-18T03:00:00+07:00',
+    // [Optional] end time of the maintenance, in UNIX timestamp or ISO 8601 format
+    // if not specified, the maintenance will be considered as on-going
+    // end: '2050-01-01T00:00:00+08:00',
+    // [Optional] color of the maintenance alert at status page, default to "yellow"
+    // color: 'blue',
+  },
+]
 
 // Don't edit this line
 export { maintenances, pageConfig, workerConfig }
