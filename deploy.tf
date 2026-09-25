@@ -46,6 +46,10 @@ resource "cloudflare_workers_script" "uptimeflare_worker" {
     }
   }
 
+  placement = {
+    mode = "smart"
+  }
+
   migrations = var.enable_do_migration ? {
     new_tag            = "v1"
     new_sqlite_classes = ["RemoteChecker"]
