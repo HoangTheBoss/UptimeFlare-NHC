@@ -56,10 +56,22 @@ jobs:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ steps.fetch_account_id.outputs.account_id }}
 
+      - name: Inject Telegram Bot Token
+        if: env.TELEGRAM_BOT_TOKEN != ''
+        run: |
+          sed -i "s|\$TELEGRAM_BOT_TOKEN|${TELEGRAM_BOT_TOKEN}|g" uptime.config.ts
+          sed -i "s|\${env.TELEGRAM_BOT_TOKEN}|${TELEGRAM_BOT_TOKEN}|g" uptime.config.ts
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+
       - name: Build worker
         run: |
           cd worker
           npx wrangler deploy src/index.ts --outdir dist --dry-run
+
+      - name: Restore uptime.config.ts
+        run: |
+          git checkout uptime.config.ts
 
       - name: Build page
         run: |

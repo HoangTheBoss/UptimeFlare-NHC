@@ -108,7 +108,7 @@ const workerConfig: WorkerConfig = {
     // More info at Wiki: https://github.com/lyc8503/UptimeFlare/wiki/Setup-notification
     webhook: {
       // [Required] webhook URL (example: Telegram Bot API)
-      url: 'https://api.telegram.org/bot${env.TELEGRAM_BOT_TOKEN}/sendMessage',
+      url: 'https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage',
       // [Optional] HTTP method, default to 'GET' for payloadType=param, 'POST' otherwise
       // method: 'POST',
       // [Optional] headers to be sent
@@ -124,7 +124,7 @@ const workerConfig: WorkerConfig = {
       // [Required] payload to be sent
       // $MSG will be replaced with the human-readable notification message
       payload: {
-        chat_id: 8204327900,
+        chat_id: 5121536138,
         text: '$MSG',
       },
       // [Optional] timeout calling this webhook, in millisecond, default to 5000
